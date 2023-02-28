@@ -9,15 +9,15 @@ def compute_height(n, parents):
     height = [0] * n
     for i in range(n):
         if height[i] == 0:
-        cur_h = 1
-        br = i
-        while parents[br] != -1:
-            br = parents[br]
-            if height [br] != 0:
-                cur_h += height[br]
-                break
-            cur_h += 1
-        height[i] = cur_h
+            cur_h = 1
+            br = i
+            while parents[br] != -1:
+                br = parents[br]
+                if height [br] != 0:
+                    cur_h += height[br]
+                    break
+                cur_h += 1
+            height[i] = cur_h
     return max(height)
 
 
