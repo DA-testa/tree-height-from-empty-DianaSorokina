@@ -8,7 +8,7 @@ import numpy
 def compute_height(n, parents):
     height = [0] * n
     for i in range(n):
-        if height[i] == 0
+        if height[i] == 0:
         cur_h = 1
         br = i
         while parents[br] != -1:
