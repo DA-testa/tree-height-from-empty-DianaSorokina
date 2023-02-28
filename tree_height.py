@@ -27,7 +27,7 @@ def main():
     if input_source == 'file':
         filename = input()
         if 'a' in filename:
-            print(invalid file)
+            print("invalid file")
             break;
          with open(filename, 'r') as f:
             n= int(f.readline().strip())
