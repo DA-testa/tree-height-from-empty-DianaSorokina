@@ -6,10 +6,19 @@ import numpy
 
 
 def compute_height(n, parents):
-    # Write this function
-    max_height = 0
-    # Your code here
-    return max_height
+    height = [0] * n
+    for i in range(n):
+        if height[i] == 0
+        cur_h = 1
+        br = i
+        while parents[br] != -1:
+            br = parents[br]
+            if height [br] != 0:
+                cur_h += height[br]
+                break
+            cur_h += 1
+        height[i] = cur_h
+    return max(height)
 
 
 def main():
@@ -19,8 +28,11 @@ def main():
     # account for github input inprecision
     
     # input number of elements
+    n = int(input())
     # input values in one variable, separate with space, split these values in an array
+    parents = list(map(int, input().split()))
     # call the function and output it's result
+    print(compute_heigth(n. parents))
     pass
 
 # In Python, the default limit on recursion depth is rather low,
