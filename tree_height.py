@@ -32,7 +32,7 @@ def main():
     # input values in one variable, separate with space, split these values in an array
     parents = list(map(int, input().split()))
     # call the function and output it's result
-    print(compute_heigth(n. parents))
+    print(compute_height(n. parents))
     pass
 
 # In Python, the default limit on recursion depth is rather low,
