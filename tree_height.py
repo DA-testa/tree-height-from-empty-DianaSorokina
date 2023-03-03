@@ -6,22 +6,19 @@ import numpy
 
 
 def compute_height(n, parents):
-    heights = [-1] * n
+    height = [0] * n
     for i in range(n):
-        if heights[i] != -1:
-            continue
-        height =1
-        cur_h = i
-        while parents[cur_h] != -1:
-            if heights[cur_h] != -1:
-                height += heights[cur_h]
-                break
-            else:
-                 cur_h = parents[cur_h]
-                 height += 1
-        heights[i] = height  
-    return max(heights)
-
+       if height[i] == 0:
+           cur_h = 1
+           br = i
+           while parents[br] != -1:
+             br = parents[br]
+             if height[br] !=0:
+                 cur_h += height[br]
+                 break
+             cur_h += 1
+           height[i] = cur_h
+     return max(height)
 
 def main():
     # implement input form keyboard and from files
