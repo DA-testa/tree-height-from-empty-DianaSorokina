@@ -26,17 +26,23 @@ def main():
     #
     # let user input file name to use, don't allow file names with letter a
     # account for github input inprecision
-    file_name = input()
-    while 'a' in file_name:
+    try:
         file_name = input()
+        while 'a' in file_name:
+            file_name = input()
+    except EOFError:
+        return
     
     # input number of elements
-    n = int(input())
+    try:
+        n = int(input())
     # input values in one variable, separate with space, split these values in an array
-    parents = list(map(int, input().split()))
+        parents = list(map(int, input().split()))
     # call the function and output it's result
-    print(compute_height(n, parents))
-    pass
+        print(compute_height(n, parents))
+    except EOFError:
+        return
+    
 
 # In Python, the default limit on recursion depth is rather low,
 # so raise it here for this problem. Note that to take advantage
