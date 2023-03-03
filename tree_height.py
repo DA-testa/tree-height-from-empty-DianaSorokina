@@ -6,19 +6,21 @@ import numpy
 
 
 def compute_height(n, parents):
-    height = [0] * n
+    height = [-1] * n
     for i in range(n):
-        if height[i] == 0:
-            cur_h = 1
-            br = i
-            while parents[br] != -1:
-                br = parents[br]
-                if height [br] != 0:
-                    cur_h += height[br]
-                    break
-                cur_h += 1
-            height[i] = cur_h
-    return max(height)
+        if heights[i] != -1:
+            continue
+        height =1
+        cur_h = i
+        while parents[cur_h] != -1:
+           if heights = parents[cur_h]
+               height += heights[cur_h]
+               break
+           else:
+                cur_h = parents[cur_h]
+                height += 1
+        heights[i] = height  
+    return max(heights)
 
 
 def main():
@@ -40,7 +42,7 @@ def main():
         parents = list(map(int, input().split()))
     # call the function and output it's result
         print(compute_height(n, parents))
-    except EOFError:
+    except (EOFError, ValueError):
         return
     
 
