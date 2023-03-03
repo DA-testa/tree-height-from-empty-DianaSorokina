@@ -6,7 +6,7 @@ import numpy
 
 
 def compute_height(n, parents):
-    height = [-1] * n
+    heights = [-1] * n
     for i in range(n):
         if heights[i] != -1:
             continue
