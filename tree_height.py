@@ -29,22 +29,18 @@ def main():
         file_name = input().strip()
         while 'a' in file_name:
             file_name = input().strip()
-        with open(file_name) as f:
-            n = int(f.readline().strip())
-            parents = list(map(int, f.readLine().split()))
-        print(compute_height(n,parents))
     except EOFError:
         return
     
     # input number of elements
-   # try:
-    #    n = int(input().strip())
+    try:
+        n = int(input().strip())
     # input values in one variable, separate with space, split these values in an array
-    #    parents = list(map(int, input().split()))
+        parents = list(map(int, input().split()))
     # call the function and output it's result
-    #    print(compute_height(n, parents))
-   # except EOFError:
-    #    return
+        print(compute_height(n, parents))
+    except EOFError:
+        return
     
 
 # In Python, the default limit on recursion depth is rather low,
