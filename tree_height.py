@@ -27,15 +27,15 @@ def main():
     # let user input file name to use, don't allow file names with letter a
     # account for github input inprecision
     try:
-        file_name = input()
+        file_name = input().strip()
         while 'a' in file_name:
-            file_name = input()
+            file_name = input().strip()
     except EOFError:
         return
     
     # input number of elements
     try:
-        n = int(input())
+        n = int(input().strip())
     # input values in one variable, separate with space, split these values in an array
         parents = list(map(int, input().split()))
     # call the function and output it's result
@@ -50,5 +50,4 @@ def main():
 sys.setrecursionlimit(10**7)  # max depth of recursion
 threading.stack_size(2**27)   # new thread will get stack of such size
 threading.Thread(target=main).start()
-main()
 # print(numpy.array([1,2,3]))
