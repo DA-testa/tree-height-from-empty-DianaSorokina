@@ -39,7 +39,7 @@ def main():
         parents = list(map(int, input().split()))
     # call the function and output it's result
         print(compute_height(n, parents))
-    except (EOFError, ValueError):
+    except EOFError:
         return
     
 
