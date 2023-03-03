@@ -18,7 +18,7 @@ def compute_height(n, parents):
                  break
              cur_h += 1
            height[i] = cur_h
-     return max(height)
+    return max(height)
 
 def main():
     # implement input form keyboard and from files
