@@ -26,6 +26,9 @@ def main():
     #
     # let user input file name to use, don't allow file names with letter a
     # account for github input inprecision
+    file_name = input()
+    while 'a' in file_name:
+        return
     
     # input number of elements
     n = int(input())
