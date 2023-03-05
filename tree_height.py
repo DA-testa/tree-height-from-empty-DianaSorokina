@@ -22,25 +22,23 @@ def compute_height(n, parents):
 
 def main():
     # implement input form keyboard and from files
-    #
     # let user input file name to use, don't allow file names with letter a
     # account for github input inprecision
-    try:
-        file_name = input().strip()
-        while 'a' in file_name:
-            file_name = input().strip()
-    except EOFError:
-        return
-    
-    # input number of elements
-    try:
-        n = int(input().strip())
+    # input number of elements 
     # input values in one variable, separate with space, split these values in an array
-        parents = list(map(int, input().split()))
     # call the function and output it's result
-        print(compute_height(n, parents))
-    except EOFError:
-        return
+       
+        n = input().strip()
+        if n =='I':
+            n = int(input())
+            parents = list(map(int,input().split()))
+            print(compute_height(n,parents))
+        elif n =='F':
+            file = input()
+            with open("./test/"+file, 'r') as f:
+                n = int(f.readline().strip())
+                parents = list(map(int, f.readline().strip().split()))
+                print(compute_height(n,parents))
     
 
 # In Python, the default limit on recursion depth is rather low,
